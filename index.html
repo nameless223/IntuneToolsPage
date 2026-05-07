@@ -1,52 +1,85 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
-  <base target="_blank">
   <meta charset="UTF-8" />
   <title>Intune Tools</title>
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syncopate:wght@700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
-
 <body>
 
+<!-- Particle canvas target -->
 <div id="particles"></div>
 
-<div id="content">
-  <div id="intro">
-    <h2>Intune Tools</h2>
-    <p class="subtitle">Microsoft Intune tenant inventory &amp; management</p>
-    <div class="profile-links">
-      <a class="github-link" href="https://github.com/nameless223" target="_blank" style="padding:10px 20px;font-size:15px;">
-        <i class="fab fa-github" style="font-size:18px;"></i>
+<!-- ══════════ HERO ══════════ -->
+<section id="hero">
+  <div class="hero-inner">
+
+    <!-- Howard the Alien — place assets/howard.gif in the assets folder -->
+    <div class="howard-wrap">
+      <img class="howard-gif" src="assets/howard.gif" alt="Howard the Alien" />
+    </div>
+
+    <h1 class="hero-title">Intune Tools</h1>
+    <p class="hero-tagline">Microsoft Intune tenant inventory &amp; management</p>
+
+    <div class="hero-links">
+      <a class="github-btn" href="https://github.com/nameless223" target="_blank">
+        <i class="fab fa-github"></i>
         <span>nameless223</span>
       </a>
-      <a href="https://www.buymeacoffee.com/nameless223" target="_blank"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=nameless223&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" alt="Buy me a coffee" style="height:50px;width:auto;display:block;border-radius:6px;" /></a>
+      <a href="https://www.buymeacoffee.com/nameless223" target="_blank">
+        <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=nameless223&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+             alt="Buy me a coffee" style="height:42px;width:auto;display:block;border-radius:8px;" />
+      </a>
     </div>
-    <hr>
+
+  </div>
+
+  <div class="scroll-cue">
+    <span>Scroll to explore</span>
+    <div class="scroll-bounce"><i class="fas fa-chevron-down"></i></div>
+  </div>
+</section>
+
+<!-- ══════════ APP PREVIEW ══════════ -->
+<section id="preview" class="page-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">App Preview</span>
+      <h2 class="section-title">See it in action</h2>
+    </div>
     <div class="app-frame">
       <div class="frame-bar">
         <span class="dot red"></span>
         <span class="dot yellow"></span>
         <span class="dot green"></span>
+        <span class="frame-title">IntuneTools — Inventory Explorer</span>
       </div>
       <img src="assets/app-preview.png" alt="Intune Tools – Inventory Explorer dashboard" />
     </div>
   </div>
+</section>
 
-  <section id="features">
-    <h3 class="features-heading">What's inside</h3>
+<!-- ══════════ FEATURES ══════════ -->
+<section id="features" class="page-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Features</span>
+      <h2 class="section-title">Everything you need to manage your tenant</h2>
+    </div>
 
     <div class="features-grid">
 
       <div class="feature-card">
-        <div class="card-header">
-          <span class="card-icon-wrap" style="--icon-color:#4A90D9"><i class="fas fa-lock"></i></span>
-          <h4>Authentication</h4>
-        </div>
-        <ul>
+        <div class="card-icon-wrap" style="--c:#4A90D9"><i class="fas fa-lock"></i></div>
+        <h4 class="card-title">Authentication</h4>
+        <ul class="card-list">
           <li>Microsoft Entra (Azure AD) sign-in via MSAL interactive browser flow</li>
           <li>Silent token refresh — automatically re-authenticates when tokens expire</li>
           <li>Sign-out support</li>
@@ -54,11 +87,9 @@
       </div>
 
       <div class="feature-card">
-        <div class="card-header">
-          <span class="card-icon-wrap" style="--icon-color:#E83951"><i class="fas fa-chart-pie"></i></span>
-          <h4>Dashboard</h4>
-        </div>
-        <ul>
+        <div class="card-icon-wrap" style="--c:#E83951"><i class="fas fa-chart-pie"></i></div>
+        <h4 class="card-title">Dashboard</h4>
+        <ul class="card-list">
           <li>Summary stat cards: devices, compliance, encryption, users, apps, policies &amp; profiles</li>
           <li>Compliance donut chart (compliant / non-compliant / grace period / unknown / N/A)</li>
           <li>OS distribution, device ownership, top-8 manufacturers, and 12-month enrollment trend charts</li>
@@ -66,11 +97,9 @@
       </div>
 
       <div class="feature-card">
-        <div class="card-header">
-          <span class="card-icon-wrap" style="--icon-color:#28C840"><i class="fas fa-laptop"></i></span>
-          <h4>Devices</h4>
-        </div>
-        <ul>
+        <div class="card-icon-wrap" style="--c:#28C840"><i class="fas fa-laptop"></i></div>
+        <h4 class="card-title">Devices</h4>
+        <ul class="card-list">
           <li>Full managed-device list with OS, compliance, model, last sync, and more</li>
           <li>Filter by OS, compliance state, free-text, and "stale only" toggle</li>
           <li>Bulk lookup by pasting a list of device names</li>
@@ -81,11 +110,9 @@
       </div>
 
       <div class="feature-card">
-        <div class="card-header">
-          <span class="card-icon-wrap" style="--icon-color:#F5A623"><i class="fas fa-check-circle"></i></span>
-          <h4>Compliance</h4>
-        </div>
-        <ul>
+        <div class="card-icon-wrap" style="--c:#F5A623"><i class="fas fa-check-circle"></i></div>
+        <h4 class="card-title">Compliance</h4>
+        <ul class="card-list">
           <li>Device compliance list with state filter (Compliant / Non-Compliant / Grace Period / Unknown)</li>
           <li>Per-device detail panel showing all individual policy states</li>
           <li>Compliance summary stats, donut chart, and OS breakdown table</li>
@@ -94,11 +121,9 @@
       </div>
 
       <div class="feature-card">
-        <div class="card-header">
-          <span class="card-icon-wrap" style="--icon-color:#9B59B6"><i class="fas fa-users"></i></span>
-          <h4>Users</h4>
-        </div>
-        <ul>
+        <div class="card-icon-wrap" style="--c:#9B59B6"><i class="fas fa-users"></i></div>
+        <h4 class="card-title">Users</h4>
+        <ul class="card-list">
           <li>Entra user list with display name, UPN, email, status, license count, department &amp; job title</li>
           <li>Filter by account status and free-text search</li>
           <li>Per-user group membership side panel</li>
@@ -107,11 +132,9 @@
       </div>
 
       <div class="feature-card">
-        <div class="card-header">
-          <span class="card-icon-wrap" style="--icon-color:#1ABC9C"><i class="fas fa-th-large"></i></span>
-          <h4>Apps</h4>
-        </div>
-        <ul>
+        <div class="card-icon-wrap" style="--c:#1ABC9C"><i class="fas fa-th-large"></i></div>
+        <h4 class="card-title">Apps</h4>
+        <ul class="card-list">
           <li>Intune mobile app list with name, publisher, type, publishing state, and dates</li>
           <li>Filter by app type and free-text search</li>
           <li>Configurable columns and CSV export</li>
@@ -119,11 +142,9 @@
       </div>
 
       <div class="feature-card">
-        <div class="card-header">
-          <span class="card-icon-wrap" style="--icon-color:#E67E22"><i class="fas fa-clipboard-list"></i></span>
-          <h4>Policies</h4>
-        </div>
-        <ul>
+        <div class="card-icon-wrap" style="--c:#E67E22"><i class="fas fa-clipboard-list"></i></div>
+        <h4 class="card-title">Policies</h4>
+        <ul class="card-list">
           <li>Two-tab view: Compliance Policies and Configuration Profiles</li>
           <li>Search and filter by name across both tabs</li>
           <li>Policy and profile count badges</li>
@@ -132,11 +153,9 @@
       </div>
 
       <div class="feature-card">
-        <div class="card-header">
-          <span class="card-icon-wrap" style="--icon-color:#3498DB"><i class="fas fa-sitemap"></i></span>
-          <h4>Assignments</h4>
-        </div>
-        <ul>
+        <div class="card-icon-wrap" style="--c:#3498DB"><i class="fas fa-sitemap"></i></div>
+        <h4 class="card-title">Assignments</h4>
+        <ul class="card-list">
           <li>Browse all app, compliance policy, and configuration profile assignments by Entra group</li>
           <li>Category tabs: Required App, Available App, Compliance Policy, Device Configuration, Scripts &amp; more</li>
           <li>Orphaned assignment detection — flags assignments targeting deleted groups</li>
@@ -145,11 +164,9 @@
       </div>
 
       <div class="feature-card">
-        <div class="card-header">
-          <span class="card-icon-wrap" style="--icon-color:#E83951"><i class="fas fa-search"></i></span>
-          <h4>Global Search</h4>
-        </div>
-        <ul>
+        <div class="card-icon-wrap" style="--c:#E83951"><i class="fas fa-search"></i></div>
+        <h4 class="card-title">Global Search</h4>
+        <ul class="card-list">
           <li>Cross-entity search covering devices, users, apps, compliance policies, and config profiles simultaneously</li>
           <li>Results grouped by entity type</li>
           <li>Selecting a result navigates to the relevant page with search pre-filled</li>
@@ -157,11 +174,9 @@
       </div>
 
       <div class="feature-card">
-        <div class="card-header">
-          <span class="card-icon-wrap" style="--icon-color:#95A5A6"><i class="fas fa-cog"></i></span>
-          <h4>Settings</h4>
-        </div>
-        <ul>
+        <div class="card-icon-wrap" style="--c:#95A5A6"><i class="fas fa-cog"></i></div>
+        <h4 class="card-title">Settings</h4>
+        <ul class="card-list">
           <li>Configurable auto-refresh interval (disabled, 5 min, 15 min, 30 min, 1 hour)</li>
           <li>Configurable stale-sync threshold (7 – 90 days) used for stale device highlighting</li>
           <li>Settings persisted to disk</li>
@@ -169,11 +184,9 @@
       </div>
 
       <div class="feature-card">
-        <div class="card-header">
-          <span class="card-icon-wrap" style="--icon-color:#2ECC71"><i class="fas fa-server"></i></span>
-          <h4>Infrastructure</h4>
-        </div>
-        <ul>
+        <div class="card-icon-wrap" style="--c:#2ECC71"><i class="fas fa-server"></i></div>
+        <h4 class="card-title">Infrastructure</h4>
+        <ul class="card-list">
           <li>In-app toast notifications (info, success, warn, error) with 3.5 s auto-dismiss</li>
           <li>File-based daily log rotation (14-day retention) in %AppData%\IntuneTools\logs</li>
           <li>MVVM architecture via CommunityToolkit.Mvvm throughout</li>
@@ -181,35 +194,41 @@
       </div>
 
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ── Setup Guide ── -->
-  <section id="setup">
-    <h3 class="features-heading">Setup Guide</h3>
+<!-- ══════════ SETUP GUIDE ══════════ -->
+<section id="setup" class="page-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Getting Started</span>
+      <h2 class="section-title">Up and running in minutes</h2>
+    </div>
 
     <!-- Prerequisites -->
-    <div class="setup-prereqs">
-      <div class="prereq-header">
-        <span class="card-icon-wrap" style="--icon-color:#F5A623"><i class="fas fa-clipboard-check"></i></span>
+    <div class="prereq-card">
+      <div class="prereq-head">
+        <div class="card-icon-wrap" style="--c:#F5A623"><i class="fas fa-clipboard-check"></i></div>
         <h4>Prerequisites</h4>
       </div>
       <ul class="prereq-list">
-        <li><i class="fas fa-windows" style="color:#4A90D9"></i> Windows 10 / 11 or Windows Server 2016+</li>
-        <li><i class="fas fa-cube" style="color:#9B59B6"></i> <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0">.NET 10 Desktop Runtime</a> (or SDK if building from source)</li>
+        <li><i class="fab fa-windows" style="color:#4A90D9"></i> Windows 10 / 11 or Windows Server 2016+</li>
+        <li><i class="fas fa-cube" style="color:#9B59B6"></i> <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0" target="_blank">.NET 10 Desktop Runtime</a> (or SDK if building from source)</li>
         <li><i class="fas fa-user-shield" style="color:#2ECC71"></i> An Azure / Microsoft Entra account with at least read access to your Intune tenant</li>
       </ul>
     </div>
 
-    <!-- Steps -->
+    <!-- Timeline steps -->
     <div class="setup-steps">
 
-      <!-- Step 1 -->
       <div class="setup-step">
-        <div class="step-number">1</div>
+        <div class="step-node">
+          <div class="step-number">1</div>
+        </div>
         <div class="step-body">
           <h4>Register an App in Entra</h4>
           <ol class="step-list">
-            <li>Sign in to the <a href="https://portal.azure.com">Azure Portal</a>.</li>
+            <li>Sign in to the <a href="https://portal.azure.com" target="_blank">Azure Portal</a>.</li>
             <li>Navigate to <strong>Microsoft Entra ID → App registrations → New registration</strong>.</li>
             <li>Give it a name (e.g. <em>IntuneTools</em>), leave the default account type, and set the redirect URI:
               <ul class="sub-list">
@@ -222,56 +241,37 @@
         </div>
       </div>
 
-      <!-- Step 2 -->
       <div class="setup-step">
-        <div class="step-number">2</div>
+        <div class="step-node">
+          <div class="step-number">2</div>
+        </div>
         <div class="step-body">
           <h4>Grant API Permissions</h4>
-          <p class="step-intro">In your new app registration go to <strong>API permissions → Add a permission → Microsoft Graph → Delegated permissions</strong> and add all of the following:</p>
+          <p class="step-intro">In your new app registration go to <strong>API permissions → Add a permission → Microsoft Graph → Delegated permissions</strong> and add:</p>
           <div class="permissions-table">
             <div class="perm-row perm-header">
               <span>Permission</span>
               <span>Purpose</span>
             </div>
-            <div class="perm-row">
-              <code>DeviceManagementManagedDevices.Read.All</code>
-              <span>Read managed devices</span>
-            </div>
-            <div class="perm-row">
-              <code>DeviceManagementApps.Read.All</code>
-              <span>Read apps</span>
-            </div>
-            <div class="perm-row">
-              <code>DeviceManagementConfiguration.Read.All</code>
-              <span>Read config profiles</span>
-            </div>
-            <div class="perm-row">
-              <code>DeviceManagementRBAC.Read.All</code>
-              <span>Read compliance policies</span>
-            </div>
-            <div class="perm-row">
-              <code>Device.Read.All</code>
-              <span>Read Entra device objects (group membership)</span>
-            </div>
-            <div class="perm-row">
-              <code>Group.Read.All</code>
-              <span>Read Entra group memberships</span>
-            </div>
-            <div class="perm-row">
-              <code>User.Read.All</code>
-              <span>Read users</span>
-            </div>
+            <div class="perm-row"><code>DeviceManagementManagedDevices.Read.All</code><span>Read managed devices</span></div>
+            <div class="perm-row"><code>DeviceManagementApps.Read.All</code><span>Read apps</span></div>
+            <div class="perm-row"><code>DeviceManagementConfiguration.Read.All</code><span>Read config profiles</span></div>
+            <div class="perm-row"><code>DeviceManagementRBAC.Read.All</code><span>Read compliance policies</span></div>
+            <div class="perm-row"><code>Device.Read.All</code><span>Read Entra device objects</span></div>
+            <div class="perm-row"><code>Group.Read.All</code><span>Read Entra group memberships</span></div>
+            <div class="perm-row"><code>User.Read.All</code><span>Read users</span></div>
           </div>
-          <p class="step-note"><i class="fas fa-info-circle"></i> After adding permissions, click <strong>Grant admin consent for your tenant</strong> (requires Global Admin or Privileged Role Admin). All permissions should show a green checkmark.</p>
+          <p class="step-note"><i class="fas fa-info-circle"></i> Click <strong>Grant admin consent for your tenant</strong> (requires Global Admin or Privileged Role Admin).</p>
         </div>
       </div>
 
-      <!-- Step 3 -->
       <div class="setup-step">
-        <div class="step-number">3</div>
+        <div class="step-node">
+          <div class="step-number">3</div>
+        </div>
         <div class="step-body">
           <h4>Configure appsettings.json</h4>
-          <p class="step-intro">In the same folder as <code>IntuneTools.exe</code>, open (or create) <code>appsettings.json</code> and fill in your Client ID:</p>
+          <p class="step-intro">In the same folder as <code>IntuneTools.exe</code>, open or create <code>appsettings.json</code>:</p>
           <div class="code-block">
             <div class="code-bar">
               <span class="code-lang">JSON</span>
@@ -284,17 +284,27 @@
           </div>
           <ul class="config-notes">
             <li><code>ClientId</code> — the Application (client) ID from Step 1.</li>
-            <li><code>TenantId</code> — use <code>"common"</code> to allow any Entra tenant, or replace with your specific tenant ID to restrict sign-in to your organisation only.</li>
+            <li><code>TenantId</code> — use <code>"common"</code> for any tenant, or your specific tenant ID to restrict sign-in.</li>
           </ul>
         </div>
       </div>
 
     </div>
-  </section>
+  </div>
+</section>
 
-</div><!-- /#content -->
+<!-- ══════════ FOOTER ══════════ -->
+<footer id="footer">
+  <div class="footer-inner">
+    <p class="footer-name">Built by <a href="https://github.com/nameless223" target="_blank">nameless223</a></p>
+    <a href="https://www.buymeacoffee.com/nameless223" target="_blank">
+      <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=nameless223&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+           alt="Buy me a coffee" style="height:36px;width:auto;display:block;border-radius:6px;" />
+    </a>
+  </div>
+</footer>
 
-<script type="text/javascript" src="js/demo.js"></script>
-<script type="text/javascript" src="js/effects.js"></script>
+<script src="js/demo.js"></script>
+<script src="js/effects.js"></script>
 </body>
 </html>
