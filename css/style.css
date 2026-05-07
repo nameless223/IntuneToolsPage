@@ -618,6 +618,83 @@ code {
 strong { color: rgba(255, 255, 255, 0.85); font-weight: 700; }
 em     { color: rgba(255, 255, 255, 0.65); font-style: italic; }
 
+/* ══════════════════════════════════════════
+   Effects
+══════════════════════════════════════════ */
+
+/* 1. Scroll progress bar */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(to right, #4791DB, #0066CC);
+  z-index: 1000;
+  border-radius: 0 2px 2px 0;
+  pointer-events: none;
+  transition: width 0.08s linear;
+}
+
+/* 2. Typewriter cursor */
+.type-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.75em;
+  background: #E83951;
+  margin-left: 6px;
+  vertical-align: middle;
+  border-radius: 1px;
+  animation: cursor-blink 0.75s step-end infinite;
+  transition: opacity 0.4s ease;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* 3. Scroll fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 4. App frame animated glow */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 1px rgba(232, 57, 81, 0.25),
+      0 8px 40px rgba(0, 0, 0, 0.65),
+      0 0 90px rgba(232, 57, 81, 0.10);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px rgba(232, 57, 81, 0.60),
+      0 8px 40px rgba(0, 0, 0, 0.65),
+      0 0 160px rgba(232, 57, 81, 0.30);
+  }
+}
+
+.app-frame {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.app-frame:hover {
+  animation-play-state: paused;
+}
+
+/* 5. Feature card 3-D tilt — transition handled by JS on mouseleave */
+.feature-card {
+  will-change: transform;
+}
+
 /* ── Responsive ── */
 
 @media only screen and (max-width: 900px) {

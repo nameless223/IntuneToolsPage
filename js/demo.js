@@ -15,7 +15,7 @@
   var CFG = {
     count       : 140,
     baseRadius  : 2.0,
-    speed       : 0.28,
+    speed       : 0.7,
     proximity   : 160,
     mouseRadius : 200,
     lineWidth   : 0.9
@@ -60,12 +60,12 @@
 
     // Speed cap + gentle damping
     var spd = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
-    if (spd > CFG.speed * 1.8) {
-      this.vx = (this.vx / spd) * CFG.speed * 1.8;
-      this.vy = (this.vy / spd) * CFG.speed * 1.8;
+    if (spd > CFG.speed * 1.5) {
+      this.vx = (this.vx / spd) * CFG.speed * 1.5;
+      this.vy = (this.vy / spd) * CFG.speed * 1.5;
     }
-    this.vx *= 0.999;
-    this.vy *= 0.999;
+    this.vx *= 0.9995;
+    this.vy *= 0.9995;
 
     this.x += this.vx;
     this.y += this.vy;
