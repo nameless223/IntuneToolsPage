@@ -41,27 +41,8 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Particle canvas — injected by particleground, pinned to viewport ── */
-
-#particles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-/* Force the inserted canvas to fixed so it never affects document flow */
-.pg-canvas {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  z-index: 0;
-  pointer-events: none;
-}
+/* #particles is an empty placeholder — the canvas is appended to body by demo.js */
+#particles { display: none; }
 
 /* ── Scrollable content layer on top ── */
 
