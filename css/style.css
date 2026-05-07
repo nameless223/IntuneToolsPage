@@ -114,10 +114,10 @@ h2 {
 }
 
 .bmc-img {
-  height: 33px;
+  height: 24px;
   width: auto;
   display: block;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 .github-link .fab,
