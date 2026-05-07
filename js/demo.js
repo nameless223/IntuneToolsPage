@@ -13,7 +13,7 @@
   var MOUSE_COLOR = '100, 180, 255';
 
   var CFG = {
-    count       : 90,
+    count       : 140,
     baseRadius  : 2.0,
     speed       : 0.28,
     proximity   : 160,
