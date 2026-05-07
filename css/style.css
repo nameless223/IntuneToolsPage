@@ -151,6 +151,33 @@ body {
   justify-content: center;
 }
 
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 26px;
+  border-radius: 100px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 0 28px rgba(59,130,246,0.35);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  text-decoration: none;
+}
+
+.download-btn:hover {
+  background: #2563eb;
+  box-shadow: 0 0 44px rgba(59,130,246,0.55);
+  transform: translateY(-1px);
+  text-decoration: none;
+  color: #fff;
+}
+
+.download-btn .fas { font-size: 14px; }
+
 .github-btn {
   display: inline-flex;
   align-items: center;

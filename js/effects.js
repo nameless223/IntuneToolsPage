@@ -63,7 +63,7 @@
   /* ══════════════════════════════════════════
      3. Scroll fade-in
   ══════════════════════════════════════════ */
-  var fadeTargets = document.querySelectorAll('.feature-card, .setup-step, .prereq-card');
+  var fadeTargets = document.querySelectorAll('.feature-card, .setup-step');
   fadeTargets.forEach(function (el) { el.classList.add('fade-in'); });
 
   ['.features-grid', '.setup-steps'].forEach(function (sel) {
